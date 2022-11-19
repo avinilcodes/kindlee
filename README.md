@@ -1,3 +1,2 @@
-# kindlee
-
-## This repository is for Metrohacks 2022
+# Kindlee
+Building a CLI based backend for kindlee 
