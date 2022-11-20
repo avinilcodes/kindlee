@@ -23,7 +23,7 @@
     "monthly_rent_spare":"1500"
 }
 '''
-Response
+# Response
 '''
 {
     "best_suits": "Minnesota,Utah,Vermont"
