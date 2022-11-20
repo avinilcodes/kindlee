@@ -21,7 +21,6 @@ func initRouter(dep dependencies) (router *mux.Router) {
 	router.HandleFunc("/login", login.Login(dep.UserLoginService)).Methods(http.MethodPost)
 	router.HandleFunc("/user", middleware.AuthorizationMiddleware(user.AddUserHandler(dep.UserServices), "super_admin,admin")).Methods(http.MethodPost)
 	router.HandleFunc("/get/state", state.GetSuitableState(dep.StateService)).Methods(http.MethodPost)
-	//Add user
 
 	ops := runtimemid.RedocOpts{SpecURL: "swagger.yaml"}
 	sh := runtimemid.Redoc(ops, nil)
