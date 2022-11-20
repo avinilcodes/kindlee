@@ -22,7 +22,7 @@ definitions:
         type: string
         x-go-name: TaskStatusCode
     type: object
-    x-go-package: taskmanager/db
+    x-go-package: kindlee/db
   User:
     properties:
       created_at:
@@ -49,7 +49,7 @@ definitions:
         type: string
         x-go-name: UpdatedAt
     type: object
-    x-go-package: taskmanager/db
+    x-go-package: kindlee/db
 info:
   description: Documentation for users API
   title: Task Manager APIs

@@ -3,7 +3,7 @@ package db
 import (
 	"context"
 	"database/sql"
-	"taskmanager/utils"
+	"kindlee/utils"
 	"time"
 
 	"github.com/sethvargo/go-password/password"
@@ -25,7 +25,7 @@ type CreateUserResponse struct {
 	Password string `json:"password"`
 }
 
-//generate random password
+// generate random password
 func generatePassword() (string, error) {
 	return password.Generate(8, 2, 1, false, false)
 }

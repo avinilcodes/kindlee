@@ -3,12 +3,12 @@ package middleware
 import (
 	"context"
 	"errors"
+	"kindlee/api"
+	"kindlee/app"
+	"kindlee/config"
+	"kindlee/login"
 	"net/http"
 	"strings"
-	"taskmanager/api"
-	"taskmanager/app"
-	"taskmanager/config"
-	"taskmanager/login"
 
 	"github.com/golang-jwt/jwt"
 )
@@ -40,7 +40,7 @@ func AuthorizationMiddleware(handler http.Handler, roleType string) http.Handler
 	}
 }
 
-//readToken method will read the Authorization header and will return the token string or error
+// readToken method will read the Authorization header and will return the token string or error
 func readToken(r *http.Request) (token string, err error) {
 	//TODO: header missing error
 	authHeader := strings.Split(r.Header.Get("Authorization"), "Bearer ")
@@ -52,7 +52,7 @@ func readToken(r *http.Request) (token string, err error) {
 	return
 }
 
-//validateToken will validate the given token, and it will return the claims or error
+// validateToken will validate the given token, and it will return the claims or error
 func validateToken(jwtToken string) (login.Claims, error) {
 	if jwtToken == "" {
 		err := errors.New("Authorization token is missing")

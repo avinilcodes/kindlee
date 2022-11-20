@@ -3,10 +3,10 @@ package main
 import (
 	"os"
 
-	"taskmanager/app"
-	"taskmanager/config"
-	"taskmanager/db"
-	"taskmanager/server"
+	"kindlee/app"
+	"kindlee/config"
+	"kindlee/db"
+	"kindlee/server"
 
 	"github.com/urfave/cli"
 )

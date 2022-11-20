@@ -1,4 +1,4 @@
-module taskmanager
+module kindlee
 
 go 1.18
 

@@ -3,7 +3,7 @@ package app
 import (
 	"time"
 
-	"taskmanager/config"
+	"kindlee/config"
 
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"

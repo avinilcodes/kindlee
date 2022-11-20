@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"taskmanager/config"
+	"kindlee/config"
 
 	"github.com/urfave/negroni"
 )

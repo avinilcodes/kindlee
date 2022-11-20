@@ -4,7 +4,7 @@ package mocks
 
 import (
 	context "context"
-	db "taskmanager/db"
+	db "kindlee/db"
 
 	mock "github.com/stretchr/testify/mock"
 )

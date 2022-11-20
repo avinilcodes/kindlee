@@ -3,9 +3,9 @@ package login
 import (
 	"context"
 	"errors"
+	"kindlee/config"
+	"kindlee/db"
 	"strings"
-	"taskmanager/config"
-	"taskmanager/db"
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"

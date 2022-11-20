@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"taskmanager/config"
+	"kindlee/config"
 
 	_ "github.com/lib/pq"
 	"github.com/mattes/migrate"

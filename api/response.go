@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"taskmanager/app"
+	"kindlee/app"
 )
 
 type Response struct {

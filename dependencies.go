@@ -1,16 +1,18 @@
 package server
 
 import (
-	"kindlee/app"
-	"kindlee/db"
-	"kindlee/login"
-	"kindlee/user"
-	"kindlee/utils"
+	"taskmanager/app"
+	"taskmanager/db"
+	"taskmanager/login"
+	"taskmanager/task"
+	"taskmanager/user"
+	"taskmanager/utils"
 )
 
 type dependencies struct {
 	UserLoginService login.Service
 	UserServices     user.Service
+	TaskService      task.Service
 }
 
 func initDependencies() (dependencies, error) {
@@ -20,6 +22,8 @@ func initDependencies() (dependencies, error) {
 
 	// call new service
 	userService := user.NewService(dbStore, logger)
+
+	taskService := task.NewService(dbStore, logger)
 	loginService := login.NewService(dbStore, logger)
 
 	err := db.CreateSuperAdmin(dbStore)
@@ -28,7 +32,8 @@ func initDependencies() (dependencies, error) {
 	}
 
 	return dependencies{
-		UserLoginService: loginService,
 		UserServices:     userService,
+		UserLoginService: loginService,
+		TaskService:      taskService,
 	}, nil
 }
