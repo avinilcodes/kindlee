@@ -1,6 +1,6 @@
 # kindlee
 
-## This suggest places to live
+## This app suggest places to live
 
 ## Requirements
 # postgresql server running on localhost:5432 and having postgres user and kindlee database with password root123
