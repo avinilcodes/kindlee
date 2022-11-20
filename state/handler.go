@@ -22,6 +22,7 @@ func GetSuitableState(service Service) http.HandlerFunc {
 			rw.WriteHeader(http.StatusInternalServerError)
 			return
 		}
+
 		respBytes, err := json.Marshal(state)
 		if err != nil {
 			app.GetLogger().Warn("error while marshilling users")
