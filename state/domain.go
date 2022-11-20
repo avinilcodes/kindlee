@@ -8,3 +8,7 @@ type StateRequest struct {
 	Healthcare          string `json:"healthcare_safety"`
 	MonthlyRentSpare    string `json:"monthly_rent_spare"`
 }
+
+type StateResponse struct {
+	State string `json:"best_suits"`
+}
