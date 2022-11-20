@@ -94,7 +94,7 @@ func (cs *stateService) getState(ctx context.Context, input StateRequest) (state
 	for _, i := range ss {
 		s += i.State + ","
 	}
-	state.State = s
+	state.State = s[:len(s)-1]
 	return state, nil
 }
 func NewService(s db.Storer, l *zap.SugaredLogger) Service {
