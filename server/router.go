@@ -3,6 +3,7 @@ package server
 import (
 	"kindlee/login"
 	"kindlee/middleware"
+	"kindlee/state"
 	"kindlee/user"
 	"net/http"
 
@@ -19,6 +20,7 @@ func initRouter(dep dependencies) (router *mux.Router) {
 	//Login
 	router.HandleFunc("/login", login.Login(dep.UserLoginService)).Methods(http.MethodPost)
 	router.HandleFunc("/user", middleware.AuthorizationMiddleware(user.AddUserHandler(dep.UserServices), "super_admin,admin")).Methods(http.MethodPost)
+	router.HandleFunc("/get/state", state.GetSuitableState(dep.StateService)).Methods(http.MethodPost)
 	//Add user
 
 	ops := runtimemid.RedocOpts{SpecURL: "swagger.yaml"}

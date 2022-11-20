@@ -4,6 +4,7 @@ import (
 	"kindlee/app"
 	"kindlee/db"
 	"kindlee/login"
+	"kindlee/state"
 	"kindlee/user"
 	"kindlee/utils"
 )
@@ -11,6 +12,7 @@ import (
 type dependencies struct {
 	UserLoginService login.Service
 	UserServices     user.Service
+	StateService     state.Service
 }
 
 func initDependencies() (dependencies, error) {
@@ -21,6 +23,7 @@ func initDependencies() (dependencies, error) {
 	// call new service
 	userService := user.NewService(dbStore, logger)
 	loginService := login.NewService(dbStore, logger)
+	stateService := state.NewService(dbStore, logger)
 
 	err := db.CreateSuperAdmin(dbStore)
 	if err != nil && !utils.CheckIfDuplicateKeyError(err) {
@@ -30,5 +33,6 @@ func initDependencies() (dependencies, error) {
 	return dependencies{
 		UserLoginService: loginService,
 		UserServices:     userService,
+		StateService:     stateService,
 	}, nil
 }

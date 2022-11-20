@@ -18,13 +18,8 @@ const (
 
 type Storer interface {
 	FindUserByEmail(ctx context.Context, email string) (user User, err error)
-	ListUsers(ctx context.Context, email string) (users []User, err error)
 	CreateUser(ctx context.Context, user User) (err error)
-	CreateTask(ctx context.Context, task Task) (err error)
-	AssignTask(ctx context.Context, userId string, taskId string) (err error)
-	ListTasks(ctx context.Context, email string) (tasks []Task, err error)
-	ListUserTask(ctx context.Context) (usertask []NameUserTask, err error)
-	UpdateTaskStatus(ctx context.Context, id string, status string, userEmail string) (err error)
+	ListStats(ctx context.Context) (stats []State, err error)
 }
 
 type store struct {

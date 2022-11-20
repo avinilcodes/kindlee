@@ -73,8 +73,4 @@ INSERT INTO public.stats(id, rank, state, total_score, personal_residencial_safe
 INSERT INTO public.stats(id, rank, state, total_score, personal_residencial_safety, financial_safety, road_safety, workplace_safety, healthcare_facilities, monthly_rent_spare) VALUES (47,9,'Washington','59.44',27,7,15,5,9,'1487.58');
 INSERT INTO public.stats(id, rank, state, total_score, personal_residencial_safety, financial_safety, road_safety, workplace_safety, healthcare_facilities, monthly_rent_spare) VALUES (48,33,'West Virginia','47.08',31,33,26,45,18,'786.83');
 INSERT INTO public.stats(id, rank, state, total_score, personal_residencial_safety, financial_safety, road_safety, workplace_safety, healthcare_facilities, monthly_rent_spare) VALUES (49,23,'Wisconsin','51.42',26,21,11,32,20,'943.58');
-INSERT INTO public.stats(id, rank, state, total_score, personal_residencial_safety, financial_safety, road_safety, workplace_safety, healthcare_facilities, monthly_rent_spare) VALUES (50,17,'Wyoming','54.04',21,27,10,22,21,'876.92	');
-
-  
- 
-)
+INSERT INTO public.stats(id, rank, state, total_score, personal_residencial_safety, financial_safety, road_safety, workplace_safety, healthcare_facilities, monthly_rent_spare) VALUES (50,17,'Wyoming','54.04',21,27,10,22,21,'876.92');
